@@ -4,14 +4,14 @@ int main(void)
 {
 CURL *curl;
 CURlcode res;
-curl=curl_ easy_ init();
+curl=curl_easy_init();
 if(curl){
-curl easy_ setopt( curl ,CURLOPT URL,"http://myip. ipip.net/");
-res=curl_ easy_ perform(curl);
-if(res!=CURLE_ 0K)
-fprintf(stderr, "curl easy_ perform() failed:%s\n",
-curl_ easy_ strerror(res));
-curl_ easy cleanup(curl);
+curl_easy_setopt( curl ,CURLOPT_URL,"http://myip. ipip.net/");
+res=curl_easy_perform(curl);
+if(res!=CURLE_OK)
+fprintf(stderr, "curl_easy_perform() failed:%s\n",
+curl_easy_strerror(res));
+curl_easy_cleanup(curl);
 }
 return 0;
 }
