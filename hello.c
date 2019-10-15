@@ -3,7 +3,7 @@
 int main(void)
 {
 CURL *curl;
-CURlcode res;
+CURLcode res;
 curl=curl_easy_init();
 if(curl){
 curl_easy_setopt( curl ,CURLOPT_URL,"http://myip. ipip.net/");
